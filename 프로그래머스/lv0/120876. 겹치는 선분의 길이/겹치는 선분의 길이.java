@@ -7,7 +7,7 @@ class Solution {
         int b = 0;
         
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+            for (int j = i + 1; j < 3; j++) {
                     if (i != j && Math.min(lines[i][1], lines[j][1]) > Math.max(lines[i][0], lines[j][0])) {
                         answer += Math.min(lines[i][1], lines[j][1]) - Math.max(lines[j][0], lines[i][0]);
                     }
@@ -23,7 +23,7 @@ class Solution {
         }
         System.out.println(answer);
         System.out.println(a);
-        answer = answer/2 - 2*a;
+        answer = answer - 2*a;
         return answer;
     }
 }
