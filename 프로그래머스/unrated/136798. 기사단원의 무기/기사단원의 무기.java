@@ -12,20 +12,16 @@ class Solution {
         
         for (int num : numbers) {
             int ys = 0;
-            // if (num == 1) {
-            //     ys = 1;
-            // } else {
-                for (int i = 1; i*i <= num; i++) {
-                    if (num % i == 0) {
-                        int temp = num/i;
-                        if (temp == i) {
-                            ys++;
-                        } else {
-                            ys += 2;
-                        }
+            for (int i = 1; i*i <= num; i++) {
+                if (num % i == 0) {
+                    int temp = num/i;
+                    if (temp == i) {
+                        ys++;
+                    } else {
+                        ys += 2;
                     }
                 }
-            // }
+            }
             if (ys > limit) {
                 ys = power;
             }
